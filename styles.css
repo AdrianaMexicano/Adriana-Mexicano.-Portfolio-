@@ -148,7 +148,11 @@ nav a.active {
   gap: 28px;
 }
 
-.project-card {
+.project-item {
+  display: block;
+}
+
+.project-thumb {
   position: relative;
   display: block;
   aspect-ratio: 1 / 1;
@@ -159,11 +163,10 @@ nav a.active {
   border-radius: 2px;
   overflow: hidden;
   border: 1px solid var(--line);
-  transition: transform 0.35s ease, border-color 0.35s ease;
+  transition: border-color 0.35s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
+.project-item:hover .project-thumb {
   border-color: rgba(169, 130, 47, 0.45);
 }
 
@@ -173,49 +176,38 @@ nav a.active {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  filter: grayscale(1) contrast(1.02);
+  transition: filter 0.6s ease;
 }
 
-.project-card:hover .project-img {
-  transform: scale(1.04);
-}
-
-/* darkening gradient so the label stays legible over the photo */
-.project-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(to top, rgba(20, 20, 19, 0.75) 0%, rgba(20, 20, 19, 0) 45%);
-  pointer-events: none;
-}
-
-/* viewfinder corner brackets, revealed on hover */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 14px;
-  z-index: 2;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0 18 L0 0 L18 0' fill='none' stroke='%23e9dfc7' stroke-width='2'/%3E%3Cpath d='M82 0 L100 0 L100 18' fill='none' stroke='%23e9dfc7' stroke-width='2'/%3E%3Cpath d='M100 82 L100 100 L82 100' fill='none' stroke='%23e9dfc7' stroke-width='2'/%3E%3Cpath d='M18 100 L0 100 L0 82' fill='none' stroke='%23e9dfc7' stroke-width='2'/%3E%3C/svg%3E");
-  background-size: 100% 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.project-card:hover::before {
-  opacity: 1;
+.project-item:hover .project-img {
+  filter: grayscale(0) contrast(1.02);
 }
 
 .project-label {
-  position: absolute;
-  left: 24px;
-  bottom: 22px;
-  z-index: 3;
+  display: block;
+  margin-top: 16px;
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1.05rem;
-  color: #e9dfc7;
+  color: var(--ink);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.project-label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.project-item:hover .project-label::after {
+  width: 100%;
 }
 
 /* FOOTER */
