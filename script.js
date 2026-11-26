@@ -102,11 +102,3 @@ if ('IntersectionObserver' in window) {
     observador.observe(p);
   });
 }
-
-// 9) Ficha de datos: se abre al entrar a la página
-const ficha = document.querySelector('.ficha');
-if (ficha) {
-  ficha.showModal();
-  ficha.querySelector('.ficha-close').addEventListener('click', () => ficha.close());
-  document.querySelector('.data-open')?.addEventListener('click', () => ficha.showModal());
-}

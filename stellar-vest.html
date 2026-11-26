@@ -29,32 +29,37 @@
 </header>
 
 <main>
-  <dialog class="ficha" aria-labelledby="ficha-titulo">
-    <p class="ficha-kicker">Datos del proyecto</p>
-    <h2 id="ficha-titulo">Stellar Vest</h2>
-    <dl>
-      <div><dt>Año</dt><dd>2026</dd></div>
-      <div><dt>Técnica</dt><dd>Bordado con fibra óptica</dd></div>
-      <div><dt>Materiales</dt><dd>Fibra óptica, LED, tela de algodón</dd></div>
-      <div><dt>Tipo</dt><dd>Proyecto académico</dd></div>
-    </dl>
-    <button class="ficha-close">Ver proyecto</button>
-  </dialog>
-
   <section class="proj-hero">
     <a class="back" href="index.html#proyectos">← Volver a proyectos</a>
     <h1>Stellar Vest</h1>
-    <p class="proj-lead">Chaleco con fibra óptica que traza una constelación real sobre la tela.</p>
-    <button class="data-open">Ver datos del proyecto</button>
-    <div class="proj-cover"><img src="images/pimages/portadastellar.jpeg" alt="Chaleco Stellar Vest con fibra óptica formando una constelación"></div>
+    <p class="proj-lead">Chaleco portátil de seguridad que se ilumina cuando alguien se acerca.</p>
+    <a class="fab-link" href="https://fabacademy.org/2025/labs/puebla/students/adriana-mexicano/finalproject.html" target="_blank" rel="noopener">Ver mi presentación en Fab Academy ↗</a>
+    <div class="proj-cover"><img src="images/pimages/portadastellar.jpeg" alt="Chaleco Stellar Vest con fibra óptica"></div>
+    <dl class="proj-meta">
+      <div><dt>Año</dt><dd>2025</dd></div>
+      <div><dt>Técnica</dt><dd>E-textil y fabricación digital</dd></div>
+      <div><dt>Materiales</dt><dd>Fibra óptica, LED, poliéster, hilo conductor</dd></div>
+      <div><dt>Tipo</dt><dd>Proyecto final de Fab Academy</dd></div>
+    </dl>
+  </section>
+
+  <section class="proj-section">
+    <h2>El proyecto</h2>
+    <div class="proj-text">
+      <p>Stellar Vest tiene un sensor de proximidad en la espalda y luces de fibra óptica. Cuando alguien se acerca demasiado, las luces se encienden.</p>
+      <p>Está pensado para mejorar la visibilidad y la seguridad de peatones, corredores y ciclistas durante la noche, y también explora la interacción artística entre luz y movimiento.</p>
+      <p>Funciona con un microcontrolador XIAO ESP32-C6 y un sensor ultrasónico LV-MaxSonar-EZ0. Por Bluetooth se cambia entre tres modos: seguridad, fiesta y apagado.</p>
+    </div>
   </section>
 
   <section class="proj-section">
     <h2>Proceso</h2>
     <ol class="steps">
-      <li><h3>Idea</h3><p>Completar: qué constelación elegiste y por qué.</p></li>
-      <li><h3>Bordado</h3><p>Completar: cómo colocaste la fibra óptica en la tela.</p></li>
-      <li><h3>Luz</h3><p>Completar: cómo conectaste los LED.</p></li>
+      <li><h3>Diseño</h3><p>Boceto, patrones del chaleco y diseño de las placas electrónicas en KiCad.</p></li>
+      <li><h3>Corte y fabricación digital</h3><p>Corte láser de la tela, vinil textil sublimado e impresión 3D del soporte del sensor.</p></li>
+      <li><h3>Electrónica</h3><p>Fresado y soldadura de las placas, módulos de fibra óptica y estuche de silicona moldeado.</p></li>
+      <li><h3>Integración</h3><p>Costura con hilo conductor, con la electrónica desmontable para poder lavar la prenda.</p></li>
+      <li><h3>Pruebas</h3><p>Calibración del sensor, refuerzo de las puntadas y ajuste de la fibra para reducir curvas.</p></li>
     </ol>
   </section>
 
@@ -74,9 +79,11 @@
 
   <section class="proj-section">
     <h2>Galería</h2>
-    <div class="gallery">
-      <!-- Para agregar fotos, copia la línea <img> y cambia el nombre del archivo -->
-      <img src="images/pimages/portadastellar.jpeg" alt="Chaleco Stellar Vest con fibra óptica formando una constelación" loading="lazy">
+    <div class="gallery gallery-4">
+      <img src="https://fabacademy.org/2025/labs/puebla/students/adriana-mexicano/assignments/week16/week16images/12.jpg" alt="Módulos de LED colocados en el chaleco" loading="lazy">
+      <img src="https://fabacademy.org/2025/labs/puebla/students/adriana-mexicano/assignments/week16/week16images/3fiber.jpg" alt="Módulo de iluminación con fibra óptica" loading="lazy">
+      <img src="https://fabacademy.org/2025/labs/puebla/students/adriana-mexicano/assignments/week16/week16images/14.jpg" alt="Corte láser de la tela" loading="lazy">
+      <img src="https://fabacademy.org/2025/labs/puebla/students/adriana-mexicano/assignments/week16/week16images/sewing1.jpg" alt="Costura del chaleco" loading="lazy">
     </div>
   </section>
 

@@ -384,52 +384,61 @@ footer {
   .reveal.visible { opacity: 1; transform: none; }
 }
 
-/* ============ CONSTELACIÓN AZUL BOOMERANG (inicio) ============ */
+/* ============ PORTADA: menos alta y nombre en negritas ============ */
+.home .hero { min-height: clamp(460px, 64vh, 580px); padding-bottom: 56px; }
+.home .hero-title, .home .hero-title span { font-weight: 700; }
+.home .hero-title { font-size: clamp(2rem, 4.8vw, 4.3rem); }
+
+/* Constelación plateada con destello de ida y vuelta */
 .home .constellation {
-  width: 480px; max-width: 44vw; top: 130px; overflow: visible;
-  filter: drop-shadow(0 0 6px #38b6ff) drop-shadow(0 0 18px #1e7bff);
+  width: 320px; max-width: 30vw; top: 118px; overflow: visible;
+  filter: drop-shadow(0 0 4px rgba(225, 230, 238, 0.45));
 }
-.home .constellation-line {
-  stroke: #6fd0ff; stroke-width: 2.8; stroke-opacity: 1;
-  animation: boomerang 2.2s ease-in-out infinite alternate;
+.home .constellation-line { fill: none; stroke: #c3c7cd; stroke-width: 1.4; animation: none; stroke-dasharray: none; }
+.home .constellation-shine {
+  fill: none; stroke: #fff; stroke-width: 2.6; stroke-linecap: round;
+  stroke-dasharray: 0.18 2; stroke-dashoffset: 0;
+  animation: boomerang 2.8s ease-in-out infinite alternate;
 }
-.home .constellation circle { fill: #d9f3ff; r: 6px; }
-@keyframes boomerang {
-  0%, 8% { stroke-dashoffset: 1; }
-  88%, 100% { stroke-dashoffset: 0; }
-}
-@media (max-width: 700px) {
-  .home .constellation { display: block; width: 230px; max-width: 65vw; top: 125px; right: 24px; }
-}
+.home .constellation circle { fill: #e6e8ec; r: 4.5px; }
+@keyframes boomerang { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -0.82; } }
 
-/* Constelación azul en la página de Stellar Vest */
-.night.on { background: #0a1224; border-color: #0a1224; color: #e3f4ff; }
-.night.on .night-hint { color: #a9cbe8; }
-.night.on .night-line { stroke: #6fd0ff; stroke-width: 2.4; stroke-opacity: 1; }
-.night.on .star { fill: #e3f6ff; filter: drop-shadow(0 0 6px #6fd0ff) drop-shadow(0 0 14px #1e7bff); }
-.night.on .night-btn:hover { background: #e3f4ff; color: #0a1224; }
-
-/* Ficha de datos que se abre al entrar */
-.ficha {
-  margin: auto; width: min(440px, calc(100vw - 32px)); padding: 32px;
-  background: #0a1224; color: #e3f4ff; border: 1px solid #6fd0ff; border-radius: 4px;
-  box-shadow: 0 0 40px -8px #1e7bff;
+/* Imagen con frase en inglés */
+.banner {
+  position: relative; display: grid; place-items: center; min-height: 240px;
+  overflow: hidden; background: #1c1c1e; color: #f1f2f4; margin-bottom: 56px;
 }
-.ficha::backdrop { background: rgba(10, 10, 12, 0.75); }
-.ficha-kicker { color: #6fd0ff; font-size: 0.9rem; }
-.ficha h2 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; font-size: 2rem; }
-.ficha dl { margin: 20px 0 24px; display: grid; gap: 12px; }
-.ficha dl div { display: grid; grid-template-columns: 100px 1fr; gap: 12px; }
-.ficha dt { color: #a9cbe8; }
-.ficha-close { padding: 10px 22px; border: 1px solid #6fd0ff; border-radius: 2px; font-weight: 500; }
-.ficha-close:hover { background: #6fd0ff; color: #0a1224; }
-.data-open { margin-top: 20px; padding: 10px 20px; border: 1px solid var(--ink); border-radius: 2px; font-weight: 500; }
-.data-open:hover { background: var(--ink); color: var(--bg); }
+.banner svg { position: absolute; inset: 0; width: 100%; height: 100%; stroke: #b9bec6; stroke-width: 0.8; opacity: 0.35; }
+.banner p {
+  position: relative; padding: 24px; text-align: center;
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.6rem, 4vw, 2.8rem);
+  text-shadow: 0 0 18px #1c1c1e, 0 0 8px #1c1c1e;
+}
+.home .section-title { padding-top: 0; }
+
+/* Constelación plateada en Stellar Vest */
+.night.on { background: #1c1c1e; border-color: #1c1c1e; color: #eef0f3; }
+.night.on .night-hint { color: #b9bec6; }
+.night.on .night-line { stroke: #d5d9df; stroke-width: 1.6; stroke-opacity: 1; }
+.night.on .star { fill: #fff; filter: drop-shadow(0 0 5px #d5d9df); }
+.night.on .night-btn:hover { background: #eef0f3; color: #1c1c1e; }
+
+/* Enlace a Fab Academy */
+.fab-link { display: inline-block; margin-top: 22px; padding: 11px 22px; border: 1px solid var(--ink); border-radius: 2px; font-weight: 500; }
+.fab-link:hover { background: var(--ink); color: var(--bg); }
+
+/* Galería de 4 fotos */
+.gallery.gallery-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* Etiquetas de Sobre mí */
 .tags { display: flex; flex-wrap: wrap; gap: 12px; }
 .tags li { padding: 8px 18px; border: 1px solid var(--gold-line); border-radius: 30px; }
 
+@media (max-width: 700px) {
+  .home .hero { min-height: 500px; }
+  .home .constellation { display: block; right: 24px; width: 200px; max-width: 55vw; top: 112px; }
+  .gallery.gallery-4 { grid-template-columns: 1fr 1fr; }
+}
 @media (prefers-reduced-motion: reduce) {
-  .home .constellation-line { animation: none; stroke-dashoffset: 0; }
+  .home .constellation-shine { display: none; }
 }
