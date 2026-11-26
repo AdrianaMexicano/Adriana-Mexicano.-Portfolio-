@@ -4,7 +4,7 @@
   --bg-card: #c2c2c0;
   --ink: #232322;
   --ink-dim: #4f4f4d;
-  --gold: #7d5e18; /* más oscuro para mejor contraste */
+  --gold: #664c12; /* más oscuro para mejor contraste */
   --gold-line: #a9822f;
   --teal: #1f635e;
   --line: rgba(35, 35, 34, 0.14);
@@ -351,4 +351,35 @@ footer {
   .night, .night-hint, .star, .night-line { transition: none; }
   .night.on .night-line { animation: none; }
   .gallery img, .toast { transition: none; }
+}
+
+/* ============ PORTADA GRANDE (solo inicio) ============ */
+.home header { position: absolute; inset: 0 0 auto; z-index: 5; color: #fff; border-color: rgba(255,255,255,.3); }
+.home nav a, .home nav a:hover, .home nav a.active { color: #fff; }
+.home .hero {
+  max-width: none; min-height: 90vh; align-items: flex-end; color: #fff;
+  padding-left: max(60px, calc((100% - 1160px) / 2));
+  background: linear-gradient(rgba(10,10,10,.4), rgba(10,10,10,.7)),
+    #232322 url("images/pimages/portadabiomateriales.jpeg") center / cover;
+}
+.home .hero-title {
+  font-family: 'Jost', sans-serif; font-style: normal; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .08em; max-width: none;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+}
+.home .hero-title span { font-weight: 300; }
+.home .hero-sub { color: #f0d48a; max-width: none; }
+.home .constellation { top: 140px; }
+.home .section-title { padding-top: 60px; }
+.home nav ul.open { background: rgba(10,10,10,.9); padding: 16px; }
+.social { flex-wrap: wrap; }
+
+@media (max-width: 700px) {
+  .home .hero { padding-left: 24px; }
+}
+
+/* Proyectos que aparecen al bajar */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s, transform .7s; }
+  .reveal.visible { opacity: 1; transform: none; }
 }

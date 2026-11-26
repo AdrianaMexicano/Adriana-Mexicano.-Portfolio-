@@ -34,13 +34,15 @@ if (copyBtn) {
 
 // 4) Avisos para proyectos que aún no tienen página (quita data-soon cuando exista)
 const toast = document.querySelector('.toast');
+let toastTimer;
 document.querySelectorAll('[data-soon]').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     if (!toast) return;
     toast.textContent = 'Este proyecto estará disponible pronto.';
     toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2500);
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
   });
 });
 
@@ -83,4 +85,20 @@ if (visor) {
   });
   visor.querySelector('.lightbox-close').addEventListener('click', () => visor.close());
   visor.addEventListener('click', (e) => { if (e.target === visor) visor.close(); });
+}
+
+// 8) Los proyectos aparecen al bajar
+if ('IntersectionObserver' in window) {
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('visible');
+      observador.unobserve(e.target);
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.project-item').forEach((p) => {
+    p.classList.add('reveal');
+    observador.observe(p);
+  });
 }
