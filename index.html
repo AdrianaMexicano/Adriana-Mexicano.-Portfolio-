@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adriana Mexicano — Portafolio</title>
+<title>Adriana Mexicano Tlaque — Diseñadora textil</title>
+<meta name="description" content="Portafolio de Adriana Mexicano Tlaque, diseñadora textil en Puebla, México. Fibra óptica, biomateriales, bordado a mano y tejido.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,15 +12,18 @@
 </head>
 <body>
 
+<a class="skip" href="#proyectos">Saltar a los proyectos</a>
+
 <header>
   <div class="header-inner">
-    <div class="logo">Adriana Mexicano</div>
+    <div class="logo">Adriana Mexicano Tlaque</div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
     <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul id="menu">
+        <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="process.html">Proceso</a></li>
+        <li><a href="contact.html">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -27,74 +31,138 @@
 
 <main>
   <section class="hero">
-    <div class="wrap" style="padding:0;">
-      <h1 class="hero-title">Adriana Mexicano</h1>
-      <p class="hero-sub">Textile Designer</p>
+    <div>
+      <p class="hero-kicker">Diseñadora textil · Puebla, México</p>
+      <h1 class="hero-title">Diseño textiles que mezclan tecnología, materiales locales y bordado a mano.</h1>
+      <p class="hero-sub">Prendas que brillan, escuchan y se tiñen con lo que crece cerca de casa.</p>
     </div>
 
     <svg class="constellation" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <polyline points="20,25 90,120 165,55 130,150 250,90"
-        stroke="#c9a869" stroke-width="1.2" stroke-opacity="0.6"/>
-      <circle cx="20" cy="25" r="4" fill="#c9a869"/>
-      <circle cx="90" cy="120" r="4" fill="#c9a869"/>
-      <circle cx="165" cy="55" r="4" fill="#c9a869"/>
-      <circle cx="130" cy="150" r="4" fill="#c9a869"/>
-      <circle cx="250" cy="90" r="4" fill="#c9a869"/>
+      <polyline class="constellation-line" pathLength="1" points="20,25 90,120 165,55 130,150 250,90"
+        stroke="#a9822f" stroke-width="1.2" stroke-opacity="0.7"/>
+      <circle cx="20" cy="25" r="4" fill="#a9822f"/>
+      <circle cx="90" cy="120" r="4" fill="#a9822f"/>
+      <circle cx="165" cy="55" r="4" fill="#a9822f"/>
+      <circle cx="130" cy="150" r="4" fill="#a9822f"/>
+      <circle cx="250" cy="90" r="4" fill="#a9822f"/>
     </svg>
   </section>
 
-  <section class="projects" aria-label="Proyectos destacados">
-    <a class="project-item" href="stellar-vest.html">
-      <span class="project-thumb">
-        <img src="images/pimages/portadastellar.jpeg" alt="Stellar Vest" class="project-img">
-      </span>
-      <span class="project-label">Stellar Vest</span>
-      <span class="project-desc">Chaleco con fibra óptica que traza una constelación real sobre la tela.</span>
-    </a>
-    <a class="project-item" href="Biomaterials.html">
-      <span class="project-thumb">
-        <img src="images/pimages/portadabiomateriales.jpeg" alt="Stellar Vest" class="project-img">
-      </span>
-      <span class="project-label">Biomaterials</span>
-      <span class="project-desc">Fibras teñidas y curadas a partir de materiales orgánicos de origen local.</span>
-    </a>
-    <a class="project-item" href="Foniverso.html">
-      <span class="project-thumb">
-        <img src="images/pimages/portadafoniverso.jpg" alt="Stellar Vest" class="project-img">
-      </span>
-      <span class="project-label">Foniverso</span>
-      <span class="project-desc">Prenda interactiva que traduce sonido en patrones bordados a mano.</span>
-    </a>
-    <a class="project-item" href="Melocoton.html">
-      <span class="project-thumb">
-        <img src="images/pimages/portadafoniverso.jpg" alt="Stellar Vest" class="project-img">
-      </span>
-      <span class="project-label">Melocoton</span>
-      <span class="project-desc">Colección cápsula inspirada en la paleta y textura del durazno.</span>
-    </a>
-    <a class="project-item" href="Harmony Heaven.html">
-      <span class="project-thumb">
-        <img src="images/pimages/portadatejidodepunto.jpg" alt="Stellar Vest" class="project-img">
-      </span>
-      <span class="project-label">Harmony Heaven</span>
-      <span class="project-desc">Serie de tejido de punto que explora ritmo y repetición en la trama.</span>
-    </a>
-    <a class="project-item" href="Woven Fabric.html">
-      <span class="project-thumb">
-        <img src="images/pimages/portadatejidoplano.jpg" alt="Stellar Vest" class="project-img">
-      </span>
-      <span class="project-label">Woven fabric</span>
-      <span class="project-desc">Estudio de telar plano con hilos de distintas texturas y pesos.</span>
-    </a>
+  <h2 class="section-title" id="proyectos">Proyectos seleccionados</h2>
+
+  <section class="projects" aria-labelledby="proyectos">
+
+    <article class="project-item">
+      <a class="project-link" href="stellar-vest.html">
+        <span class="project-thumb"><img src="images/pimages/portadastellar.jpeg" alt="Chaleco Stellar Vest con fibra óptica formando una constelación" class="project-img" loading="lazy"></span>
+        <span class="project-label">Stellar Vest</span>
+      </a>
+      <p class="project-desc">Chaleco con fibra óptica que traza una constelación real sobre la tela.</p>
+      <button class="data-btn" aria-expanded="false" aria-controls="datos-stellar">Ver datos</button>
+      <div class="data-panel" id="datos-stellar"><dl>
+        <dt>Año</dt><dd>2026</dd>
+        <dt>Técnica</dt><dd>Bordado con fibra óptica</dd>
+        <dt>Materiales</dt><dd>Fibra óptica, LED, tela de algodón</dd>
+        <dt>Tipo</dt><dd>Proyecto académico</dd>
+      </dl></div>
+    </article>
+
+    <article class="project-item">
+      <a class="project-link" href="Biomaterials.html" data-soon>
+        <span class="project-thumb"><img src="images/pimages/portadabiomateriales.jpeg" alt="Fibras teñidas con materiales orgánicos locales" class="project-img" loading="lazy"></span>
+        <span class="project-label">Biomaterials</span>
+      </a>
+      <p class="project-desc">Fibras teñidas y curadas a partir de materiales orgánicos de origen local.</p>
+      <button class="data-btn" aria-expanded="false" aria-controls="datos-bio">Ver datos</button>
+      <div class="data-panel" id="datos-bio"><dl>
+        <dt>Año</dt><dd>2026</dd>
+        <dt>Técnica</dt><dd>Teñido natural</dd>
+        <dt>Materiales</dt><dd>Fibras naturales, tintes vegetales</dd>
+        <dt>Tipo</dt><dd>Investigación de materiales</dd>
+      </dl></div>
+    </article>
+
+    <article class="project-item">
+      <a class="project-link" href="Foniverso.html" data-soon>
+        <span class="project-thumb"><img src="images/pimages/portadafoniverso.jpg" alt="Prenda Foniverso con patrones bordados a mano" class="project-img" loading="lazy"></span>
+        <span class="project-label">Foniverso</span>
+      </a>
+      <p class="project-desc">Prenda interactiva que traduce sonido en patrones bordados a mano.</p>
+      <button class="data-btn" aria-expanded="false" aria-controls="datos-foniverso">Ver datos</button>
+      <div class="data-panel" id="datos-foniverso"><dl>
+        <dt>Año</dt><dd>2026</dd>
+        <dt>Técnica</dt><dd>Bordado a mano</dd>
+        <dt>Materiales</dt><dd>Hilos de seda y algodón</dd>
+        <dt>Tipo</dt><dd>Proyecto personal</dd>
+      </dl></div>
+    </article>
+
+    <article class="project-item">
+      <a class="project-link" href="Melocoton.html" data-soon>
+        <!-- Cambia esta imagen por la portada de Melocotón -->
+        <span class="project-thumb"><img src="images/pimages/portadafoniverso.jpg" alt="Colección cápsula Melocotón en tonos durazno" class="project-img" loading="lazy"></span>
+        <span class="project-label">Melocotón</span>
+      </a>
+      <p class="project-desc">Colección cápsula inspirada en la paleta y textura del durazno.</p>
+      <button class="data-btn" aria-expanded="false" aria-controls="datos-melocoton">Ver datos</button>
+      <div class="data-panel" id="datos-melocoton"><dl>
+        <dt>Año</dt><dd>2026</dd>
+        <dt>Técnica</dt><dd>Colección cápsula</dd>
+        <dt>Materiales</dt><dd>Completar</dd>
+        <dt>Tipo</dt><dd>Proyecto de colección</dd>
+      </dl></div>
+    </article>
+
+    <article class="project-item">
+      <a class="project-link" href="Harmony Heaven.html" data-soon>
+        <span class="project-thumb"><img src="images/pimages/portadatejidodepunto.jpg" alt="Serie de tejido de punto Harmony Heaven" class="project-img" loading="lazy"></span>
+        <span class="project-label">Harmony Heaven</span>
+      </a>
+      <p class="project-desc">Serie de tejido de punto que explora ritmo y repetición en la trama.</p>
+      <button class="data-btn" aria-expanded="false" aria-controls="datos-harmony">Ver datos</button>
+      <div class="data-panel" id="datos-harmony"><dl>
+        <dt>Año</dt><dd>2026</dd>
+        <dt>Técnica</dt><dd>Tejido de punto</dd>
+        <dt>Materiales</dt><dd>Completar</dd>
+        <dt>Tipo</dt><dd>Serie de estudio</dd>
+      </dl></div>
+    </article>
+
+    <article class="project-item">
+      <a class="project-link" href="Woven Fabric.html" data-soon>
+        <span class="project-thumb"><img src="images/pimages/portadatejidoplano.jpg" alt="Muestras de tejido plano con hilos de distintas texturas" class="project-img" loading="lazy"></span>
+        <span class="project-label">Woven Fabric</span>
+      </a>
+      <p class="project-desc">Estudio de telar plano con hilos de distintas texturas y pesos.</p>
+      <button class="data-btn" aria-expanded="false" aria-controls="datos-woven">Ver datos</button>
+      <div class="data-panel" id="datos-woven"><dl>
+        <dt>Año</dt><dd>2026</dd>
+        <dt>Técnica</dt><dd>Telar plano</dd>
+        <dt>Materiales</dt><dd>Completar</dd>
+        <dt>Tipo</dt><dd>Estudio de telar</dd>
+      </dl></div>
+    </article>
+
+  </section>
+
+  <section class="cta">
+    <h2>¿Tienes un proyecto textil en mente?</h2>
+    <p>Escríbeme y lo platicamos.</p>
+    <button class="copy-mail" data-email="tucorreo@ejemplo.com">tucorreo@ejemplo.com</button>
+    <span class="copy-msg" role="status" aria-live="polite"></span>
   </section>
 </main>
 
-
-
 <footer>
-  <span>&copy; 2026 Adriana Mexicano</span>
-  <span>Puebla, México</span>
+  <span>&copy; 2026 Adriana Mexicano Tlaque</span>
+  <ul class="social">
+    <li><a href="https://instagram.com/tuusuario" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://behance.net/tuusuario" target="_blank" rel="noopener">Behance</a></li>
+    <li><a href="mailto:tucorreo@ejemplo.com">Correo</a></li>
+  </ul>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
