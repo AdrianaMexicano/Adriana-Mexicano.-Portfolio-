@@ -360,7 +360,7 @@ footer {
   max-width: none; min-height: 90vh; align-items: flex-end; color: #fff;
   padding-left: max(60px, calc((100% - 1160px) / 2));
   background: linear-gradient(rgba(10,10,10,.4), rgba(10,10,10,.7)),
-    #232322 url("images/pimages/portadabiomateriales.jpeg") center / cover;
+    #232322 url("images/pimages/foto7.jpeg") center / cover;
 }
 .home .hero-title {
   font-family: 'Jost', sans-serif; font-style: normal; font-weight: 600;
